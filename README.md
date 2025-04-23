@@ -20,4 +20,12 @@ The **Node.js application code** used in this project is sourced from the follow
 
 For a detailed explanation of the infrastructure being deployed, refer to this [blog post](https://shreyashbhise.hashnode.dev/deploy-a-three-tier-architecture-on-aws-end-to-end-project-demo).
 
+
+##Things to modify
+1. S3 bucket name as you like.
+2. First configure the desired, min and max capacity of the auto scaling group to 0. then apply "terraform apply" command.
+3. Once infrastructure is provisioned copy the rds instance writer endpoint and paste it into the app-tier/DBconfig.js
+4. Modify the internal load balance link into nginx.conf file.
+5. Modify the name of the bucket which you set in script files.
+6. Now upload the application code to s3 bucket and then set the desired , min and max to 2, 2 and 3 respectively. 
 ---
